@@ -15,7 +15,8 @@ public class QuickSort implements SortingAlgorithm {
     }
     @Override
     public void run(){
-
+        sort();
+        running = true;
     }
     @Override
     public void sort() {
@@ -43,9 +44,10 @@ public class QuickSort implements SortingAlgorithm {
                 int temp = array[i];
                 array[i] = array[j];
                 array[j] = temp;
+                System.out.println("index i: " + i + "  <-->  index j: " + j);
 
                 // Update the visualization
-                canvas.drawArray(array);
+//                canvas.drawArray(array);
                 pauseForVisualization();
             }
         }
@@ -56,7 +58,7 @@ public class QuickSort implements SortingAlgorithm {
         array[high] = temp;
 
         // Update the visualization
-        canvas.drawArray(array);
+//        canvas.drawArray(array);
         pauseForVisualization();
 
         return i + 1;

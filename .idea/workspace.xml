@@ -4,25 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a804b213-4ed4-4883-8eca-ea16cd61dac3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SortingVisualizer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/christianjc/sortingvisualizer/SortingAlgorithms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/christianjc/sortingvisualizer/SortingVisualizerApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/MainApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/controller/SortingVisualizerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/BubbleSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/QuickSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/SortingAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/util/SortingAlgorithmType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/view/VisualizerCanvas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/sortingvisualizer/view/MainApp.fxml" afterDir="false" />
+    <list default="true" id="a804b213-4ed4-4883-8eca-ea16cd61dac3" name="Changes" comment="Before making name changes to bubble sort">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/sortingvisualizer/model/BubbleSortTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SortingVisualizer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SortingVisualizer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/controller/SortingVisualizerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/controller/SortingVisualizerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/view/VisualizerCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/view/VisualizerCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sortingvisualizer/view/MainApp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sortingvisualizer/view/MainApp.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +33,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2bykLE0E2urIdPvzSfbhOdxzoGd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -53,18 +44,22 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "onboarding.tips.debug.path": "/Users/cjc/IdeaProjects/SortingVisualizer/src/Main.java",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.18735632",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.JavaFXApp">
     <configuration name="JavaFXApp" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.sortingvisualizer.MainApp" />
       <module name="SortingVisualizer" />
@@ -73,6 +68,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BubbleSortTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SortingVisualizer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sortingvisualizer.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sortingvisualizer.model" />
+      <option name="MAIN_CLASS_NAME" value="com.sortingvisualizer.model.BubbleSortTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BubbleSortTests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -83,6 +98,19 @@
       <option name="presentableId" value="Default" />
       <updated>1707194648270</updated>
     </task>
+    <task id="LOCAL-00001" summary="Before making name changes to bubble sort">
+      <option name="closed" value="true" />
+      <created>1707291200840</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707291200840</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Before making name changes to bubble sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="Before making name changes to bubble sort" />
   </component>
 </project>

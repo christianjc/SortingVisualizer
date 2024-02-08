@@ -6,6 +6,7 @@ import com.sortingvisualizer.view.VisualizerCanvas;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Slider;
 import javafx.scene.layout.Pane;
 
 import java.util.Objects;
@@ -21,6 +22,9 @@ public class SortingVisualizerController {
     @FXML
     private Button startButton, resetButton, stopButton;
 
+    @FXML
+    private Slider speedSlider;
+
     private VisualizerCanvas visualizerCanvas;
 
     private Thread sortingThread;
@@ -31,9 +35,15 @@ public class SortingVisualizerController {
     public void initialize() {
         visualizerCanvas = new VisualizerCanvas(800, 550);
         canvasContainer.getChildren().add(visualizerCanvas);
-//        algorithmController = new BubbleSort();
+
+        // Bidirectional binding between the slider and the visualizationDelay property
+        speedSlider.valueProperty().bindBidirectional(visualizerCanvas.visualizationDelayProperty());
+        speedSlider.setMin(1); // Set minimum value
+        speedSlider.setMax(100); // Set maximum value
+        speedSlider.setValue(50); // Set current value
+
         startButton.setOnAction(event -> startSorting());
-        resetButton.setOnAction(event -> visualizerCanvas.setRandomArray(visualizerCanvas.getArray().length));
+        resetButton.setOnAction(event -> resetSorting());
         stopButton.setOnAction(event -> stopSorting());
 
 
@@ -59,26 +69,21 @@ public class SortingVisualizerController {
         }
     }
 
-    private void resetArray() {
-        visualizerCanvas.setRandomArray(visualizerCanvas.getArray().length); // Reinitialize the array with the same size
+    private void resetSorting() {
+        visualizerCanvas.resetArray(); // Reinitialize the array with the same size
     }
 
     private void stopSorting() {
-//        visualizerCanvas.getSortingAlgorithm().stopRunning();
         algorithm.stopRunning();
+
 //        if (sortingThread != null && sortingThread.isAlive()) {
 //            sortingThread.interrupt();
 //        }
     }
 
-//    @FXML
-//    private void handleStartSort() {
-//        String selectedAlgorithm = selectAlgorithm.getValue();
-//
-//
-//
-//        visualizerCanvas.startSorting();
-//    }
+
+
+
 
 
 
