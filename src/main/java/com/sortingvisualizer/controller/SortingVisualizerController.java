@@ -67,18 +67,16 @@ public class SortingVisualizerController {
             sortingThread = new Thread(algorithm);
             sortingThread.start();
         }
+
     }
 
     private void resetSorting() {
+        stopSorting();
         visualizerCanvas.resetArray(); // Reinitialize the array with the same size
     }
 
     private void stopSorting() {
         algorithm.stopRunning();
-
-//        if (sortingThread != null && sortingThread.isAlive()) {
-//            sortingThread.interrupt();
-//        }
     }
 
 
