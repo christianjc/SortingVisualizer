@@ -1,17 +1,24 @@
 package com.sortingvisualizer.controller;
 
-import com.sortingvisualizer.model.SortingAlgorithm;
-import com.sortingvisualizer.util.SortingAlgorithmType;
-import com.sortingvisualizer.view.VisualizerCanvas;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Slider;
-import javafx.scene.layout.Pane;
+        import com.sortingvisualizer.model.SortingAlgorithm;
+        import com.sortingvisualizer.util.SortingAlgorithmType;
+        import com.sortingvisualizer.view.VisualizerCanvas;
+        import javafx.application.Platform;
+        import javafx.fxml.FXML;
+        import javafx.scene.control.Button;
+        import javafx.scene.control.ComboBox;
+        import javafx.scene.control.Slider;
+        import javafx.scene.layout.Pane;
+        import javafx.scene.control.Label;
 
-import java.util.Objects;
+        import java.util.Arrays;
+        import java.util.Objects;
 
 public class SortingVisualizerController {
+
+    private static final int CANVAS_WIDTH = 800;
+    private static final int CANVAS_HEIGHT = 500;
+    private static final double DEFAULT_SPEED = 50;
 
     @FXML
     private Pane canvasContainer;
@@ -25,64 +32,74 @@ public class SortingVisualizerController {
     @FXML
     private Slider speedSlider;
 
+    @FXML
+    private Label statusLabel;
+
     private VisualizerCanvas visualizerCanvas;
-
     private Thread sortingThread;
-
-    private SortingAlgorithm algorithm;
+    private SortingAlgorithm currentAlgorithm;
 
     @FXML
     public void initialize() {
-        visualizerCanvas = new VisualizerCanvas(800, 550);
+        visualizerCanvas = new VisualizerCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
         canvasContainer.getChildren().add(visualizerCanvas);
 
-        // Bidirectional binding between the slider and the visualizationDelay property
         speedSlider.valueProperty().bindBidirectional(visualizerCanvas.visualizationDelayProperty());
-        speedSlider.setMin(1); // Set minimum value
-        speedSlider.setMax(100); // Set maximum value
-        speedSlider.setValue(50); // Set current value
+        speedSlider.setMin(1);
+        speedSlider.setMax(100);
+        speedSlider.setValue(DEFAULT_SPEED);
 
         startButton.setOnAction(event -> startSorting());
         resetButton.setOnAction(event -> resetSorting());
         stopButton.setOnAction(event -> stopSorting());
 
+        selectAlgorithmComboBox.getItems().addAll(Arrays.stream(SortingAlgorithmType.values())
+                .map(SortingAlgorithmType::getDisplayName)
+                .toArray(String[]::new));
 
-        selectAlgorithmComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)-> {
+        selectAlgorithmComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (!Objects.equals(oldValue, newValue)) {
                 System.out.println("Changing sorting type");
                 SortingAlgorithmType value = SortingAlgorithmType.getTypeFromString(newValue);
-                if (value == null) value = SortingAlgorithmType.BUBBLE_SORT;
-                visualizerCanvas.setSortingAlgorithm(value);
+                visualizerCanvas.setSortingAlgorithm(value != null ? value : SortingAlgorithmType.BUBBLE_SORT);
+                updateStatusLabel("Algorithm selected " + newValue + ".", false);
             }
         });
-        selectAlgorithmComboBox.getItems().addAll(SortingAlgorithmType.BUBBLE_SORT.getDisplayName(), SortingAlgorithmType.QUICK_SORT.getDisplayName(), SortingAlgorithmType.MERGE_SORT.getDisplayName()); // Add as many sorting algorithms as you have implemented
-        selectAlgorithmComboBox.getSelectionModel().selectFirst(); // Optional: select the first algorithm by default
 
+        selectAlgorithmComboBox.getSelectionModel().selectFirst();
     }
 
     private void startSorting() {
-        if (sortingThread == null || !sortingThread.isAlive()) {
-            System.out.println("Creating new Tread");
-            algorithm = visualizerCanvas.getSortingAlgorithm();
-            sortingThread = new Thread(algorithm);
-            sortingThread.start();
+        if (sortingThread != null && sortingThread.isAlive()) {
+            updateStatusLabel("Sorting is already in progress.", true);
+            return;
         }
 
+        updateStatusLabel("Sorting started.", false);
+        currentAlgorithm = visualizerCanvas.getSortingAlgorithm();
+        sortingThread = new Thread(currentAlgorithm);
+        sortingThread.setDaemon(true); // Ensure the thread doesn't prevent the application from exiting
+        sortingThread.start();
     }
 
     private void resetSorting() {
         stopSorting();
-        visualizerCanvas.resetArray(); // Reinitialize the array with the same size
+        visualizerCanvas.resetArray();
+        updateStatusLabel("Array reset.", false);
     }
 
     private void stopSorting() {
-        algorithm.stopRunning();
+        if (currentAlgorithm != null) {
+            currentAlgorithm.stopRunning();
+            updateStatusLabel("Sorting stopped.", false);
+        }
     }
 
-
-
-
-
-
-
+    private void updateStatusLabel(String text, boolean isError) {
+        Platform.runLater(() -> {
+            statusLabel.setText(text);
+            statusLabel.setStyle(isError ? "-fx-text-fill: red;" : "-fx-text-fill: black;");
+        });
+    }
 }
+

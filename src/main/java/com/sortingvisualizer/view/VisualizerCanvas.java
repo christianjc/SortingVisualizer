@@ -82,7 +82,7 @@ public class VisualizerCanvas extends Canvas {
      * @param highlightedIndices the indices of elements to highlight
      */
     private void drawArray(Color highlightedColor, int... highlightedIndices) {
-        drawArray(Color.LIGHTGRAY, highlightedColor, highlightedIndices);
+        drawArray(Color.BLACK, highlightedColor, highlightedIndices);
     }
 
 
@@ -229,6 +229,7 @@ public class VisualizerCanvas extends Canvas {
     public void setArraySize(int arraySize) {
         this.arraySize = arraySize;
         initializeRandomArray(arraySize);
+        drawArray();
     }
 
     /**
@@ -260,33 +261,46 @@ public class VisualizerCanvas extends Canvas {
         return visualizationDelay;
     }
 
+    /**
+     * Resets the array to a new array of random values with the current array size. This is useful for restarting the visualization.
+     */
     public void resetArray() {
-        initializeRandomArray(arraySize);
+        initializeRandomArray(this.arraySize);
+        drawArray();
     }
 
 
 
-
-
-
+    /**
+     * Calculates the visualization delay based on a slider value.
+     * This method employs linear interpolation to translate a slider value
+     * into a corresponding delay time, facilitating control over the visualization speed.
+     * The delay inversely correlates with the slider value: higher slider values result in shorter delays.
+     *
+     * @param value The current value of the slider, expected to be within the range [1, 100].
+     * @return The calculated delay in milliseconds, within the range [5, 500] milliseconds.
+     *         Returns the maximum delay (500 ms) for slider values at the minimum end (1)
+     *         and the minimum delay (5 ms) for slider values at the maximum end (100).
+     */
     private long calculateDelayFromSlider(long value) {
-//        System.out.println("Slider value = :" + value);
-        long maxSliderValue = 100;
-        long minSliderValue = 1;
-        long maxDelay = 500; // Max delay (slowest speed) in milliseconds
-        long minDelay = 5;   // Min delay (fastest speed) in milliseconds
+        long maxSliderValue = 100; // Maximum possible slider value
+        long minSliderValue = 1;   // Minimum possible slider value
+        long maxDelay = 500;       // Maximum delay corresponding to the slowest speed, in milliseconds
+        long minDelay = 5;         // Minimum delay corresponding to the fastest speed, in milliseconds
 
         // Guard clauses for extreme values
-        if (value <= minSliderValue) return maxDelay; // Slowest speed for min slider value
-        if (value >= maxSliderValue) return minDelay; // Fastest speed for max slider value
+        if (value <= minSliderValue) return maxDelay; // Ensures the slowest speed for minimum slider values
+        if (value >= maxSliderValue) return minDelay; // Ensures the fastest speed for maximum slider values
 
-        // Linear interpolation between minDelay and maxDelay based on the slider value
+        // Linear interpolation formula to calculate delay based on the slider value
         long delayRange = maxDelay - minDelay;
         long sliderRange = maxSliderValue - minSliderValue;
         double scale = (double) delayRange / sliderRange;
-        return (long) (maxDelay - scale * (value - minSliderValue));
 
+        // Calculating the delay time inversely proportional to the slider value
+        return (long) (maxDelay - scale * (value - minSliderValue));
     }
+
 
 
 }

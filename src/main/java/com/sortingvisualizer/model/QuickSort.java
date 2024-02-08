@@ -1,6 +1,7 @@
 package com.sortingvisualizer.model;
 
 import com.sortingvisualizer.view.VisualizerCanvas;
+import javafx.scene.paint.Color;
 
 public class QuickSort implements SortingAlgorithm {
 
@@ -12,28 +13,42 @@ public class QuickSort implements SortingAlgorithm {
     }
     public void stopRunning() {
         running = false;
+
+    }
+
+    /**
+     * Restarts the running flag to true so that the sorting process can proceed.
+     */
+    public void resetRunning(){
+        running = true;
     }
     @Override
     public void run(){
+        resetRunning();
         sort();
-        running = true;
     }
     @Override
     public void sort() {
         int[] array = canvas.getArray();
-        quickSort(array, 0, array.length - 1, canvas);
+        quickSort(array, 0, array.length - 1);
     }
 
-    private void quickSort(int[] array, int low, int high, VisualizerCanvas canvas) {
+    private void quickSort(int[] array, int low, int high) {
+        if (shouldStopSorting()) {
+            return; // Early exit if sorting should be stopped
+        }
         if (low < high) {
             int pi = partition(array, low, high, canvas);
 
-            quickSort(array, low, pi - 1, canvas);
-            quickSort(array, pi + 1, high, canvas);
+            quickSort(array, low, pi - 1);
+            quickSort(array, pi + 1, high);
         }
     }
 
     private int partition(int[] array, int low, int high, VisualizerCanvas canvas) {
+        if (shouldStopSorting()) {
+            return 0; // Early exit if sorting should be stopped
+        }
         int pivot = array[high];
         int i = (low - 1);
         for (int j = low; j < high; j++) {
@@ -41,34 +56,23 @@ public class QuickSort implements SortingAlgorithm {
                 i++;
 
                 // Swap array[i] and array[j]
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-                System.out.println("index i: " + i + "  <-->  index j: " + j);
+                canvas.swap(i, j, Color.RED);
 
-                // Update the visualization
-//                canvas.drawArray(array);
-                pauseForVisualization();
             }
         }
 
         // Swap array[i+1] and array[high] (or pivot)
-        int temp = array[i + 1];
-        array[i + 1] = array[high];
-        array[high] = temp;
-
-        // Update the visualization
-//        canvas.drawArray(array);
-        pauseForVisualization();
+        canvas.swap(i + 1, high, Color.GREEN);
 
         return i + 1;
     }
 
-    private void pauseForVisualization() {
-        try {
-            Thread.sleep(20); // Delay for visualization purposes
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // Properly handle thread interruption
-        }
+    /**
+     * Checks if the current thread is interrupted or if the running flag is set to false.
+     *
+     * @return true if the thread is interrupted or the running flag is false, indicating the sorting should stop.
+     */
+    private boolean shouldStopSorting() {
+        return Thread.currentThread().isInterrupted() || !running;
     }
 }

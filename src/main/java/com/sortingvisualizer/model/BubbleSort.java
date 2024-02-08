@@ -20,20 +20,13 @@ public class BubbleSort implements SortingAlgorithm {
     }
 
     /**
-     * Requests the sorting process to stop by setting the running flag to false.
-     */
-    public void stopRunning() {
-        running = false;
-    }
-
-    /**
      * The main sorting method to be executed by the thread. It performs Bubble Sort
      * and visualizes the process on the canvas.
      */
     @Override
     public void run() {
+        resetRunning();
         sort();
-//        running = true; // Consider the lifecycle of your thread and when it should be set to true
     }
 
     /**
@@ -45,7 +38,7 @@ public class BubbleSort implements SortingAlgorithm {
             boolean swapped = false;
             for (int j = 0; j < canvas.getArraySize() - 1; j++) {
                 if (array[j] > array[j + 1]) {
-                    canvas.swap(j, j+1, Color.GREEN);
+                    canvas.swap(j, j+1, Color.RED);
                     swapped = true;
 //                    pauseForVisualization();
                     if (shouldStopSorting()) {
@@ -57,16 +50,20 @@ public class BubbleSort implements SortingAlgorithm {
         }
     }
 
-//    /**
-//     * Pauses the execution for a brief moment, defined by visualizationDelay, to allow for visualization.
-//     */
-//    private void pauseForVisualization() {
-//        try {
-//            Thread.sleep(canvas.getVisualizationDelay());
-//        } catch (InterruptedException e) {
-//            Thread.currentThread().interrupt(); // Handle thread interruption
-//        }
-//    }
+    /**
+     * Requests the sorting process to stop by setting the running flag to false.
+     */
+    public void stopRunning() {
+        running = false;
+    }
+
+    /**
+     * Restarts the running flag to true so that the sorting process can proceed.
+     */
+    public void resetRunning(){
+        running = true;
+    }
+
 
     /**
      * Checks if the current thread is interrupted or if the running flag is set to false.
