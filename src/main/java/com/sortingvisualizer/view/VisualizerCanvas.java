@@ -11,6 +11,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -154,11 +155,13 @@ public class VisualizerCanvas extends Canvas {
      * @param algo the SortingAlgorithmType indicating which algorithm to use
      */
     public void setSortingAlgorithm(SortingAlgorithmType algo) {
+        if(algorithm != null) algorithm.stopRunning();
         switch (algo) {
             case BUBBLE_SORT -> algorithm = new BubbleSort(this);
             case QUICK_SORT -> algorithm = new QuickSort(this);
             default -> algorithm = new BubbleSort(this); // Fallback to BubbleSort by default
         }
+        resetArray();
     }
 
 
@@ -209,6 +212,14 @@ public class VisualizerCanvas extends Canvas {
      */
     public void setArray(int[] array) {
         this.array = array;
+        drawArray();
+    }
+
+    /**
+     * Sets a new array to be visualized.
+     */
+    public void sortArray() {
+        Arrays.sort(this.array);
         drawArray();
     }
 
@@ -268,7 +279,6 @@ public class VisualizerCanvas extends Canvas {
         initializeRandomArray(this.arraySize);
         drawArray();
     }
-
 
 
     /**

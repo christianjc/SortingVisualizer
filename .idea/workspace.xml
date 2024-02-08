@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a804b213-4ed4-4883-8eca-ea16cd61dac3" name="Changes" comment="Cleaning code">
+    <list default="true" id="a804b213-4ed4-4883-8eca-ea16cd61dac3" name="Changes" comment="Updated SortingVisualizerController">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/sortingvisualizer/model/QuickSortTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/christianjc/sortingvisualizer/SortingAlgorithms.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/christianjc/sortingvisualizer/SortingVisualizerApp.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/controller/SortingVisualizerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/controller/SortingVisualizerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/BubbleSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/QuickSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/view/VisualizerCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/view/VisualizerCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sortingvisualizer/view/MainApp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sortingvisualizer/view/MainApp.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sortingvisualizer/model/BubbleSortTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sortingvisualizer/model/BubbleSortTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +58,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.JavaFXApp">
+  <component name="RunManager" selected="JUnit.BubbleSortTests">
     <configuration name="JavaFXApp" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.sortingvisualizer.MainApp" />
       <module name="SortingVisualizer" />
@@ -75,14 +77,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.sortingvisualizer.model" />
       <option name="MAIN_CLASS_NAME" value="com.sortingvisualizer.model.BubbleSortTests" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea -XX:+EnableDynamicAgentLoading" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QuickSortTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SortingVisualizer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sortingvisualizer.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sortingvisualizer.model" />
+      <option name="MAIN_CLASS_NAME" value="com.sortingvisualizer.model.QuickSortTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea -XX:+EnableDynamicAgentLoading" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.JavaFXApp" />
+      <item itemvalue="JUnit.BubbleSortTests" />
+      <item itemvalue="JUnit.QuickSortTests" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.BubbleSortTests" />
+        <item itemvalue="JUnit.QuickSortTests" />
       </list>
     </recent_temporary>
   </component>
@@ -119,12 +146,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707366869883</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated SortingVisualizerController">
+      <option name="closed" value="true" />
+      <created>1707369264193</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707369264193</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Before making name changes to bubble sort" />
     <MESSAGE value="Cleaning code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaning code" />
+    <MESSAGE value="Updated SortingVisualizerController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated SortingVisualizerController" />
   </component>
 </project>
