@@ -6,26 +6,6 @@ Sorting Visualizer is a JavaFX application meticulously crafted to visually demo
 ## Table of Contents
 
 - [Features](#features)
-- 
-- [Quick Start](#quick-start)
-- [Prerequisites](#prerequisites)
-- [Dependencies](#dependencies)
-- [Testing Dependencies](#testing-dependencies)
-- [Setup](#setup)
-- [Running the Application](#running-the-application)
-- [Usage](#usage)
-- [Supported Sorting Algorithms](#supported-sorting-algorithms)
-- 
-- [Learning Opportunities](#learning-opportunities)
-- [Contributing](#contributing)
-- [Roadmap](#roadmap)
-- [Acknowledgments](#acknowledgments)
-- [Contact](#contact)
-- [License](#license)
-- [Note](#note)
-
-
-- [Features](#features)
 - [For Users](#for-users)
   - [Quick Start](#quick-start)
   - [Usage](#usage)
@@ -53,6 +33,11 @@ Sorting Visualizer is a JavaFX application meticulously crafted to visually demo
 This prerequesites are for both users and developers. Before you begin, ensure you have the following software installed on your system:
 -   **Java Development Kit (JDK) 11 or newer**: Required to compile and run Java applications. [Download JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 -   **JavaFX SDK 11 or newer**: Required for JavaFX applications. [Download JavaFX SDK](https://gluonhq.com/products/javafx/)
+
+## Setup
+### Download JavaFX SDK
+1. Download the JavaFX SDK for your operating system from the [OpenJFX Downloads](https://gluonhq.com/products/javafx/) page.
+2. Extract the downloaded archive to a convenient location on your machine.
 
 ## For Users
 
@@ -109,7 +94,7 @@ After launching the Sorting Visualizer, you can:
 2. Use the slider to adjust the visualization speed.
 3. Click "Start Sort" to begin the visualization.
 4. Use "Reset" to shuffle the array and prepare for another sorting visualization.
-5. "Stop" can be used to halt the visualization at any time.
+5. "Stop" can be used to halt the visualization at any time. Note: if you click "Start Sort" once again the will restart but with the data set it stopt at. this is intended so that the user can see how some algorithms are afected with the set is not properly sorted.
 
 ### Supported Sorting Algorithms
 - Bubble Sort
@@ -117,9 +102,7 @@ After launching the Sorting Visualizer, you can:
 - More in progress...
 
 
-
 ## For Developers
-
 
 ### Dependencies
 This project relies on the following dependencies:
@@ -140,55 +123,15 @@ For unit testing and mocking within the Sorting Visualizer project, the followin
 Ensure these libraries are correctly configured in your project's build path or dependency management system to facilitate effective testing.
 
 
-
 ### Quick Start With IntelliJ IDE
 1. Ensure Java JDK 11+ and JavaFX SDK 11+ are installed.
 2. Download or clone the Sorting Visualizer repository.
-3. Configure JavaFX in your IDE.
-4. Run the application using your IDE.
-
-## Prerequisites
-To run Sorting Visualizer, ensure you have the following installed:
-- Java Development Kit (JDK) 11 or newer.
-- JavaFX SDK 11 or newer, available for download from [OpenJFX](https://openjfx.io/).
+3. Set the `JAVA_HOME` environment variable to the path of your JDK installation.
+4. Configure JavaFX in your IDE.
+5. Run the application using your IDE.
 
 
-## Setup
-### Download JavaFX SDK
-1. Download the JavaFX SDK for your operating system from the [OpenJFX Downloads](https://gluonhq.com/products/javafx/) page.
-2. Extract the downloaded archive to a convenient location on your machine.
 
-### Configure Environment Variables
-- Set the `JAVA_HOME` environment variable to the path of your JDK installation.
-
-## Running the Application
-
-### Windows
-1. Open Command Prompt and navigate to the directory containing the `SortingVisualizer.jar` file.
-2. Execute the following command, replacing `<path-to-javafx-sdk-lib>` with your actual path to the JavaFX SDK `lib` directory:
-    ```cmd
-    java --module-path "<path-to-javafx-sdk-lib>" --add-modules javafx.controls,javafx.fxml,javafx.graphics -jar SortingVisualizer.jar
-    ```
-
-### macOS/Linux
-1. Open Terminal and navigate to the directory containing the `SortingVisualizer.jar` file.
-2. Run the application using the following command, ensuring to replace `<path-to-javafx-sdk-lib>` with the correct path to the JavaFX SDK `lib` directory:
-    ```sh
-    java --module-path "<path-to-javafx-sdk-lib>" --add-modules javafx.controls,javafx.fxml,javafx.graphics -jar SortingVisualizer.jar
-    ```
-
-## Usage
-After launching the Sorting Visualizer, follow these steps to use the application:
-1. Select a sorting algorithm from the dropdown menu.
-2. Use the slider to adjust the visualization speed.
-3. Click "Start Sort" to begin the visualization.
-4. Use "Reset" to shuffle the array and prepare for another sorting visualization.
-5. "Stop" can be used to halt the visualization at any time.
-
-## Supported Sorting Algorithms
-- Bubble Sort
-- Quick Sort
-- More in progress...
 
 ## Learning Opportunities
 Engaging with the Sorting Visualizer project offers a comprehensive learning experience, covering a wide range of programming and software engineering concepts:
