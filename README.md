@@ -212,6 +212,8 @@ For inquiries or support, please reach out to us at christianjc.engineer@gmail.c
 This project is licensed under the [MIT License](LICENSE.md). Feel free to use, modify, and distribute the code as you see fit.
 
 ## Note
+This project is in its early stages and, as such, may contain some errors or bugs. I am continually working to improve and refine the Sorting Visualizer, and your feedback is invaluable. If you encounter any issues or have suggestions for enhancements, please feel free to [open an issue](link-to-your-repo-issues-page) or contact me directly. I greatly appreciate your contributions and support in making this project better for everyone.
+
 Enjoy exploring various sorting algorithms with Sorting Visualizer!
 
 
