@@ -5,20 +5,22 @@ Sorting Visualizer is a JavaFX application meticulously crafted to visually demo
 
 ## Table of Contents
 
-- [Quick Start](#quick-start)
 - [Features](#features)
-- [Usage](#usage)
-- [Supported Sorting Algorithms](#supported-sorting-algorithms)
+- [Quick Start](#quick-start)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
 - [Running the Application](#running-the-application)
+- [Usage](#usage)
+- [Supported Sorting Algorithms](#supported-sorting-algorithms)
 - [Learning Opportunities](#learning-opportunities)
 - [Contributing](#contributing)
+- [Roadmap](#roadmap)
+- [Acknowledgments](#acknowledgments)
+- [Contact](#contact)
+- [License](#license)
+- 
 - [Engage with Us!](#engage-with-us)
 - [Dependencies](#dependencies)
-- [Acknowledgments](#acknowledgments)
-- [License](#license)
-- [Contact](#contact)
 
 
 ## Features
@@ -37,6 +39,25 @@ Sorting Visualizer is a JavaFX application meticulously crafted to visually demo
 To run Sorting Visualizer, ensure you have the following installed:
 - Java Development Kit (JDK) 11 or newer.
 - JavaFX SDK 11 or newer, available for download from [OpenJFX](https://openjfx.io/).
+
+## Dependencies
+
+This project relies on the following dependencies:
+
+- **[JavaFX SDK 11](https://openjfx.io/) or newer**: Utilized for UI components and animations. Ensure you have the JavaFX SDK properly set up and configured with your IDE or build tool.
+- **[JUnit 5](https://junit.org/junit5/)**: Employed for unit testing. Ensure JUnit 5 is included in your project's build path if you're implementing unit tests.
+
+## Testing Dependencies
+
+For unit testing and mocking within the Sorting Visualizer project, the following specific libraries and their versions are employed:
+
+- **[Mockito-Core 5.10.0](https://search.maven.org/artifact/org.mockito/mockito-core/5.10.0/jar)**: Used for mocking objects in tests, enabling isolated testing of components. Mockito simplifies the creation of mock objects and verification of interactions.
+
+- **[Byte Buddy 1.14.11](https://search.maven.org/artifact/net.bytebuddy/byte-buddy/1.14.11/jar)** and **[Byte Buddy Agent 1.14.11](https://search.maven.org/artifact/net.bytebuddy/byte-buddy-agent/1.14.11/jar)**: Byte Buddy is a code generation and manipulation library for Java, used by Mockito for dynamically creating mock objects at runtime. The Byte Buddy Agent is used to redefine classes at runtime, which is essential for certain types of mocks and stubs.
+
+- **[Objenesis 3.3](https://search.maven.org/artifact/org.objenesis/objenesis/3.3/jar)**: A library for instantiating Java objects without invoking their constructors, used by Mockito to create instances of mock objects.
+
+Ensure these libraries are correctly configured in your project's build path or dependency management system to facilitate effective testing.
 
 ## Setup
 ### Download JavaFX SDK
