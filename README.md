@@ -8,6 +8,8 @@ Sorting Visualizer is a JavaFX application meticulously crafted to visually demo
 - [Features](#features)
 - [Quick Start](#quick-start)
 - [Prerequisites](#prerequisites)
+- [Dependencies](#dependencies)
+- [Testing Dependencies](#testing-dependencies)
 - [Setup](#setup)
 - [Running the Application](#running-the-application)
 - [Usage](#usage)
@@ -18,9 +20,7 @@ Sorting Visualizer is a JavaFX application meticulously crafted to visually demo
 - [Acknowledgments](#acknowledgments)
 - [Contact](#contact)
 - [License](#license)
-- 
-- [Engage with Us!](#engage-with-us)
-- [Dependencies](#dependencies)
+- [Note](#note)
 
 
 ## Features
@@ -29,7 +29,7 @@ Sorting Visualizer is a JavaFX application meticulously crafted to visually demo
 - Select from a variety of sorting algorithms.
 - Interactive UI to control the sorting process.
 
-## Quick Start
+## Quick Start With IntelliJ IDE
 1. Ensure Java JDK 11+ and JavaFX SDK 11+ are installed.
 2. Download or clone the Sorting Visualizer repository.
 3. Configure JavaFX in your IDE or set up environment variables as described in the Setup section.
@@ -137,7 +137,7 @@ For inquiries or support, please reach out to us at sortingvisualizer@example.co
 This project is licensed under the [MIT License](LICENSE.md). Feel free to use, modify, and distribute the code as you see fit.
 
 ## Note
-- It's important to include all necessary JavaFX modules in the `--add-modules` argument. Typically, modules like `javafx.controls`, `javafx.fxml`, and `javafx.graphics` are essential. Include additional modules if your application uses more JavaFX features, such as `javafx.media` or `javafx.web`.
+
 
 Enjoy exploring various sorting algorithms with Sorting Visualizer!
 
