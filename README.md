@@ -5,11 +5,10 @@ Sorting Visualizer is a JavaFX application meticulously crafted to visually demo
 
 ## Table of Contents
 
-- [Features](#features)
+- [Key Features](#key-features)
 - [Prerequisites](#prerequisites)
-- [Setup](#setup)
 - [For Users](#for-users)
-  - [Quick Start](#quick-start)
+  - [Quick Start Guide](#quick-start-guide)
   - [Usage](#usage)
   - [Supported Sorting Algorithms](#supported-sorting-algorithms)
 - [For Developers](#for-developers)
@@ -25,30 +24,43 @@ Sorting Visualizer is a JavaFX application meticulously crafted to visually demo
 - [Note](#note)
 
 
-## Features
-- Visualize sorting algorithms in real-time.
-- Control the speed of the visualization.
-- Select from a variety of sorting algorithms.
-- Interactive UI to control the sorting process.
+## Key Features
+
+The Sorting Visualizer is designed with user engagement and educational value in mind, offering:
+
+- **Real-Time Visualization**: Experience the dynamic process of sorting algorithms through real-time animations, providing a clear understanding of their operational flow.
+- **Speed Control**: Gain control over the visualization pace, allowing for a customized viewing experience that caters to individual learning speeds.
+- **Algorithm Selection**: Choose from a diverse range of sorting algorithms to visualize, offering insights into their comparative efficiencies and methodologies.
+- **Interactive Interface**: Engage with an intuitive UI that facilitates easy control over the visualization process, enhancing the learning and user experience.
 
 ## Prerequisites
-This prerequesites are for both users and developers. Before you begin, ensure you have the following software installed on your system:
--   **Java Development Kit (JDK) 11 or newer**: Required to compile and run Java applications. [Download JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
--   **JavaFX SDK 11 or newer**: Required for JavaFX applications. [Download JavaFX SDK](https://gluonhq.com/products/javafx/)
 
-## Setup
-### Download JavaFX SDK
-1. Download the JavaFX SDK for your operating system from the [OpenJFX Downloads](https://gluonhq.com/products/javafx/) page.
-2. Extract the downloaded archive to a convenient location on your machine.
+To ensure a smooth experience with the Sorting Visualizer, both users and developers are required to have the following installations on their systems:
+
+- **Java Development Kit (JDK) 11 or Newer**: A fundamental requirement for compiling and running Java-based applications. Secure the latest version from the [official JDK download page](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
+- **JavaFX SDK 11 or Newer**: Essential for running JavaFX applications, providing the graphical user interface for the Sorting Visualizer. Obtain it from the [OpenJFX Downloads](https://gluonhq.com/products/javafx/) portal.
+
 
 ## For Users
 
-### Quick Start
-These instructions will guide you through getting the souce code, compiling and running the Sorting Visualizer app.
+### Quick Start Guide
 
-#### Setup
-1. **Clone or Download the Source Code**: Obtain the source code by cloning this repository or downloading it as a ZIP file and extracting it to your desired location.
-2. **Set Up JavaFX**: Ensure the JavaFX SDK is extracted and note the path to its `lib` directory, as it will be required to compile and run the application.
+Follow this streamlined process to obtain the source code, compile, and launch the Sorting Visualizer application:
+
+
+#### Setup Instructions
+
+Quickly prepare your environment for running the Sorting Visualizer:
+
+1. **Get the Source Code**: Clone this GitHub repository or download it as a ZIP and extract it to a directory of your choice.
+
+    ```bash
+    git clone https://github.com/christianjc/SortingVisualizer.git
+    ```
+
+2. **Acquire JavaFX SDK**: Visit the [OpenJFX Downloads](https://gluonhq.com/products/javafx/) page and download the SDK compatible with your operating system.
+
+3. **Configure JavaFX**: Unzip the JavaFX SDK to a preferred location. Remember the path to its `lib` folder, as it will be essential for compilation and execution of the application.
 
 
 #### Compiling and Running the Application
@@ -126,10 +138,9 @@ Jumpstart your development with the Sorting Visualizer by following these simple
 2. **Obtain the Source Code**: Clone the Sorting Visualizer repository to your local machine or download it as a ZIP archive and extract it to your preferred directory.
 
     ```sh
-    git clone https://github.com/yourusername/SortingVisualizer.git
+    git clone https://github.com/christianjc/SortingVisualizer.git
     ```
 
-    Replace `https://github.com/yourusername/SortingVisualizer.git` with the actual repository URL.
 
 3. **Configure the JDK Environment**: Set the `JAVA_HOME` environment variable to point to your JDK installation directory. This step ensures that your development tools can locate the JDK binaries.
 
