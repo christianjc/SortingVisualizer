@@ -20,6 +20,8 @@ import java.util.Random;
  * array representation on the canvas.
  */
 public class VisualizerCanvas extends Canvas {
+    private final Color BAR_COLOR = Color.web("#607D8B");
+    private final Color BAR_HIGHLIGHTED = Color.web("#FFC107");
     private int[] array;
     private final GraphicsContext gc;
     private SortingAlgorithm algorithm;
@@ -39,6 +41,13 @@ public class VisualizerCanvas extends Canvas {
         this.arraySize = 100; // Default array size
         initializeRandomArray(this.arraySize);
         this.algorithm = new BubbleSort(this); // Default algorithm
+        drawArray();
+    }
+
+    /**
+     * It updates the canvas by redrawing the array
+     */
+    public void update(){
         drawArray();
     }
 
@@ -83,7 +92,7 @@ public class VisualizerCanvas extends Canvas {
      * @param highlightedIndices the indices of elements to highlight
      */
     private void drawArray(Color highlightedColor, int... highlightedIndices) {
-        drawArray(Color.BLACK, highlightedColor, highlightedIndices);
+        drawArray(BAR_COLOR, highlightedColor, highlightedIndices);
     }
 
 
@@ -93,7 +102,7 @@ public class VisualizerCanvas extends Canvas {
      * @param highlightedIndices indices of elements to highlight
      */
     private void drawArray(int... highlightedIndices) {
-        drawArray(Color.BLACK, Color.RED, highlightedIndices);
+        drawArray(BAR_COLOR, BAR_HIGHLIGHTED, highlightedIndices);
     }
 
 

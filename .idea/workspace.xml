@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SortingVisualizer:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a804b213-4ed4-4883-8eca-ea16cd61dac3" name="Changes" comment="Updated SortingVisualizerController">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sortingvisualizer/model/QuickSortTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SortingVisualizer_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/sortingvisualizer/view/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/christianjc/sortingvisualizer/SortingAlgorithms.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/christianjc/sortingvisualizer/SortingVisualizerApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/controller/SortingVisualizerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/controller/SortingVisualizerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/model/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/util/SortingAlgorithmType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/util/SortingAlgorithmType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/view/VisualizerCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sortingvisualizer/view/VisualizerCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sortingvisualizer/model/BubbleSortTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sortingvisualizer/model/BubbleSortTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sortingvisualizer/view/MainApp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sortingvisualizer/view/MainApp.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,15 +56,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
     "onboarding.tips.debug.path": "/Users/cjc/IdeaProjects/SortingVisualizer/src/Main.java",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.18735632",
+    "project.structure.side.proportion": "0.24974619",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.BubbleSortTests">
+  <component name="RunManager" selected="Application.JavaFXApp">
     <configuration name="JavaFXApp" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.sortingvisualizer.MainApp" />
       <module name="SortingVisualizer" />
@@ -154,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707369264193</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updated SortingVisualizerController">
+      <option name="closed" value="true" />
+      <created>1707375805550</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707375805550</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

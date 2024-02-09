@@ -15,11 +15,18 @@ public class MainApp extends Application {
         // Load the FXML file
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/sortingvisualizer/view/MainApp.fxml")));
 
+        // Create a scene object
+        Scene scene = new Scene(root,800, 600);
+
+        // Get the styleSheet and add the to the scene object
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/com/sortingvisualizer/view/style.css")).toExternalForm()); // Add the stylesheet
+
+
         // Set the window title
         primaryStage.setTitle("Sorting Algorithm Visualizer");
 
         // Create and set the Scene
-        primaryStage.setScene(new Scene(root, 800, 600)); // Adjust the size as needed
+        primaryStage.setScene(scene); // Adjust the size as needed
 
         // Show the primary stage
         primaryStage.show();

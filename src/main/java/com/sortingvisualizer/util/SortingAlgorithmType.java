@@ -3,9 +3,9 @@ package com.sortingvisualizer.util;
 
 public enum SortingAlgorithmType {
     BUBBLE_SORT("Bubble Sort"),
-    QUICK_SORT("Quick Sort"),
-    MERGE_SORT("Merge Sort");
-    // Add more sorting algorithms as needed
+    QUICK_SORT("Quick Sort");
+
+    // Here I can add more sorting algorithms as needed
 
     private final String displayName;
 

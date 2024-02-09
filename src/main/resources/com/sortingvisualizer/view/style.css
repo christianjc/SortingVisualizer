@@ -1,0 +1,40 @@
+.root {
+    -fx-font-family: 'Arial';
+    -fx-base: #F0F0F0;
+    -fx-background-color: #F0F0F0; /* Light gray background */
+}
+
+.status-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333; /* Dark gray for text */
+}
+
+.control-pane {
+    -fx-padding: 10;
+    -fx-border-style: solid inside;
+    -fx-border-width: 2;
+    -fx-border-insets: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #333333; /* Dark gray for borders */
+    -fx-background-color: #F0F0F0; /* Light gray background */
+}
+
+.speed-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #333333; /* Dark gray for text */
+}
+
+.control-button {
+    -fx-background-color: #4A90E2; /* Muted blue for buttons */
+    -fx-text-fill: #F0F0F0; /* Light gray for text */
+    -fx-border-color: #333333; /* Dark gray for borders */
+    -fx-border-width: 2;
+}
+
+.control-button:hover {
+    -fx-background-color: #7CB9E8; /* Lighter blue for hover effect */
+}
+
+.canvas-pane {
+    -fx-background-color: #F0F0F0; /* Light gray background */
+}

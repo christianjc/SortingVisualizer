@@ -76,10 +76,20 @@ public class SortingVisualizerController {
         selectAlgorithmComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             SortingAlgorithmType value = SortingAlgorithmType.getTypeFromString(newValue);
             visualizerCanvas.setSortingAlgorithm(value != null ? value : SortingAlgorithmType.BUBBLE_SORT);
+            startButton.setDisable(false); // Re-enable the start button
             updateStatusLabel("Algorithm selected: " + newValue + ".", false);
         });
 
         selectAlgorithmComboBox.getSelectionModel().selectFirst();
+
+        canvasContainer.widthProperty().addListener((obs, oldVal, newVal) -> {
+            visualizerCanvas.setWidth(newVal.doubleValue());
+            visualizerCanvas.update();
+        });
+        canvasContainer.heightProperty().addListener((obs, oldVal, newVal) -> {
+            visualizerCanvas.setHeight(newVal.doubleValue());
+            visualizerCanvas.update();
+        });
     }
 
     /**
@@ -92,6 +102,7 @@ public class SortingVisualizerController {
             return;
         }
 
+        startButton.setDisable(true); // Disable the start button
         updateStatusLabel("Sorting started.", false);
         currentAlgorithm = visualizerCanvas.getSortingAlgorithm();
         sortingThread = new Thread(currentAlgorithm);
@@ -118,6 +129,7 @@ public class SortingVisualizerController {
             currentAlgorithm.stopRunning();
             updateStatusLabel("Sorting stopped.", false);
         }
+        startButton.setDisable(false); // Re-enable the start button
     }
 
     /**

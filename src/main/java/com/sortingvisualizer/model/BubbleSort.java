@@ -38,7 +38,7 @@ public class BubbleSort implements SortingAlgorithm {
             boolean swapped = false;
             for (int j = 0; j < canvas.getArraySize() - 1; j++) {
                 if (array[j] > array[j + 1]) {
-                    canvas.swap(j, j+1, Color.RED);
+                    canvas.swap(j, j+1, Color.web("#FFC107"));
                     swapped = true;
 //                    pauseForVisualization();
                     if (shouldStopSorting()) {
