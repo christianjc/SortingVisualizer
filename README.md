@@ -130,7 +130,7 @@ Future updates will focus on adding more sorting algorithms, enhancing UI intera
 This project is inspired by the need for clear, visual educational tools in computer science. Special thanks to the JavaFX community for providing extensive resources and support.
 
 ## Contact
-For inquiries or support, please reach out to us at sortingvisualizer@example.com.
+For inquiries or support, please reach out to us at christianjc.engineer@gmail.com
 
 ## License
 This project is licensed under the [MIT License](LICENSE.md). Feel free to use, modify, and distribute the code as you see fit.
