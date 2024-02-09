@@ -66,8 +66,8 @@ Quickly prepare your environment for running the Sorting Visualizer:
 #### Compiling and Running the Application
 
 ##### Windows
-1. **Open Command Prompt**: Navigate to the root directory of the Sorting Visualizer project where the source code is located.
-2. **Compile the Source Code**: Run the following command to compile all Java files, replacing `C:\javafx-sdk-11\lib\*` with the actual path to your JavaFX SDK `lib` directory:
+1. **Open Command Prompt**: Use `cd` to navigate to the Sorting Visualizer project directory.
+2. **Compile the Source Code**: Execute the command below to compile all Java files. Ensure you replace `C:\javafx-sdk-11\lib\*` with the actual path to the `lib` directory of your JavaFX SDK:
 
    ```cmd
    javac -d out -cp "C:\javafx-sdk-11\lib\*" src\main\java\com\sortingvisualizer\util\SortingAlgorithmType.java    src\main\java\com\sortingvisualizer\controller\SortingVisualizerController.java src\main\java\com\sortingvisualizer\MainApp.java src\main\java\com\sortingvisualizer\model\QuickSort.java src\main\java\com\sortingvisualizer\model\SortingAlgorithm.java src\main\java\com\sortingvisualizer\model\BubbleSort.java src\main\java\com\sortingvisualizer\view\VisualizerCanvas.java
@@ -75,7 +75,7 @@ Quickly prepare your environment for running the Sorting Visualizer:
    
     This command compiles all Java files in the project and places the generated `.class` files in the `out` directory.
    
-3. **Run the Application***: After compiling the source code, you can run the application using the following command, again replacing `C:\javafx-sdk-11\lib` with the actual path to your JavaFX SDK `lib` directory:
+3. **Run the Application***: With the compilation complete, use the following command to launch the application, substituting `C:\javafx-sdk-11\lib` with your JavaFX SDK `lib` directory path:
 
     ```cmd
     java --module-path "C:\path\to\javafx-sdk\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics -cp "out;src\main\resources" com.sortingvisualizer.MainApp
@@ -119,9 +119,15 @@ Once the Sorting Visualizer is up and running, you have several interactive opti
 
 
 ### Supported Sorting Algorithms
-- Bubble Sort
-- Quick Sort
-- More in progress...
+
+The Sorting Visualizer showcases a variety of sorting algorithms, each with its unique approach and performance characteristics:
+
+- **Bubble Sort**: A straightforward comparison-based algorithm where adjacent elements are swapped if they are in the wrong order. This process repeats until the array is sorted. It's known for its simplicity but has an average and worst-case time complexity of O(n²), making it inefficient for large datasets.
+
+- **Quick Sort**: A highly efficient, divide-and-conquer algorithm that selects an element as a pivot and partitions the array around the pivot. With average and worst-case time complexities of O(n log n) and O(n²), respectively, Quick Sort excels particularly with large, unsorted datasets. It's important to note that its performance may decrease on arrays that are already sorted or nearly sorted, due to its pivot selection and partitioning method.
+
+- **More in Progress**: We aim to broaden our visualization range with more sorting algorithms. Future updates may include algorithms like Merge Sort, Insertion Sort, and Heap Sort, each offering different runtime complexities and use-case scenarios.
+
 
 
 ## For Developers
