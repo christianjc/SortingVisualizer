@@ -31,11 +31,9 @@ Sorting Visualizer is a JavaFX application meticulously crafted to visually demo
   - [Usage](#usage)
   - [Supported Sorting Algorithms](#supported-sorting-algorithms)
 - [For Developers](#for-developers)
-  - [Prerequisites](#prerequisites)
   - [Dependencies](#dependencies)
   - [Testing Dependencies](#testing-dependencies)
   - [Setup](#setup)
-  - [Compiling and Running from Source](#compiling-and-running-from-source)
 - [Learning Opportunities](#learning-opportunities)
 - [Contributing](#contributing)
 - [Roadmap](#roadmap)
@@ -59,41 +57,34 @@ This prerequesites are for both users and developers. Before you begin, ensure y
 ## For Users
 
 ### Quick Start
-
 These instructions will guide you through getting the souce code, compiling and running the Sorting Visualizer app.
 
-
 #### Setup
-
 1. **Clone or Download the Source Code**: Obtain the source code by cloning this repository or downloading it as a ZIP file and extracting it to your desired location.
-
 2. **Set Up JavaFX**: Ensure the JavaFX SDK is extracted and note the path to its `lib` directory, as it will be required to compile and run the application.
-
-
-
-
 
 
 #### Compiling and Running the Application
 
-#### Windows
+##### Windows
 1. **Open Command Prompt**: Navigate to the root directory of the Sorting Visualizer project where the source code is located.
 2. **Compile the Source Code**: Run the following command to compile all Java files, replacing `C:\javafx-sdk-11\lib\*` with the actual path to your JavaFX SDK `lib` directory:
 
    ```cmd
-   javac -d out -cp "C:\javafx-sdk-11\lib\*" src\main\java\com\sortingvisualizer\util\SortingAlgorithmType.java          src\main\java\com\sortingvisualizer\controller\SortingVisualizerController.java src\main\java\com\sortingvisualizer\MainApp.java src\main\java\com\sortingvisualizer\model\QuickSort.java src\main\java\com\sortingvisualizer\model\SortingAlgorithm.java src\main\java\com\sortingvisualizer\model\BubbleSort.java src\main\java\com\sortingvisualizer\view\VisualizerCanvas.java
-    ```
-   This command compiles all Java files in the project and places the generated `.class` files in the `out` directory.
+   javac -d out -cp "C:\javafx-sdk-11\lib\*" src\main\java\com\sortingvisualizer\util\SortingAlgorithmType.java    src\main\java\com\sortingvisualizer\controller\SortingVisualizerController.java src\main\java\com\sortingvisualizer\MainApp.java src\main\java\com\sortingvisualizer\model\QuickSort.java src\main\java\com\sortingvisualizer\model\SortingAlgorithm.java src\main\java\com\sortingvisualizer\model\BubbleSort.java src\main\java\com\sortingvisualizer\view\VisualizerCanvas.java
+   ```
    
-3.**Run the Application***: After compiling the source code, you can run the application using the following command, again replacing `/path/to/javafx-sdk/lib` with the actual path to your JavaFX SDK `lib` directory:
+    This command compiles all Java files in the project and places the generated `.class` files in the `out` directory.
+   
+3. **Run the Application***: After compiling the source code, you can run the application using the following command, again replacing `C:\javafx-sdk-11\lib` with the actual path to your JavaFX SDK `lib` directory:
+
     ```cmd
-    java --module-path "C:\javafx-sdk-11\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics -cp out com.sortingvisualizer.MainApp
+    java --module-path "C:\path\to\javafx-sdk\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics -cp "out;src\main\resources" com.sortingvisualizer.MainApp
     ```
 
-#### macOS/Linux
 
+##### macOS/Linux
 1. **Open Terminal**: Navigate to the root directory of the Sorting Visualizer project where the source code is located.
-
 2. **Compile the Source Code**: Run the following command to compile all Java files, replacing `/path/to/javafx-sdk/lib` with the actual path to your JavaFX SDK `lib` directory:
 
     ```sh
@@ -101,42 +92,16 @@ These instructions will guide you through getting the souce code, compiling and 
     ```
 
     This command compiles all Java files in the project and places the generated `.class` files in the `out` directory.
-   
 
-    ```
+3. **Run the Application**: After compiling the source code, you can run the application using the following command, again replacing `/path/to/javafx-sdk/lib` with the actual path to your JavaFX SDK `lib` directory:
 
-
-
-
-
-
-
-### Running the Application
-
-After compiling the source code, you can run the application using the following command, again replacing `/path/to/javafx-sdk/lib` with the actual path to your JavaFX SDK `lib` directory:
-
-    ```sh
+   ```sh
     java --module-path "/path/to/javafx-sdk/lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics -cp "out:src/main/resources" com.sortingvisualizer.MainApp
-    ```
+   ```
 
-This command sets the module path to include JavaFX modules and specifies the classpath to include both the compiled `.class` files and the resources directory.
+   This command sets the module path to include JavaFX modules and specifies the classpath to include both the compiled `.class` files and the resources directory.
 
-### Quick Start
-To run the Sorting Visualizer application without setting up a development environment, you will need a pre-compiled `SortingVisualizer.jar` file. Follow the instructions below to run the application:
 
-#### Windows
-1. Open Command Prompt and navigate to the directory containing the `SortingVisualizer.jar` file.
-2. Execute the following command, replacing `<path-to-javafx-sdk-lib>` with your actual path to the JavaFX SDK `lib` directory:
-    ```cmd
-    java --module-path "<path-to-javafx-sdk-lib>" --add-modules javafx.controls,javafx.fxml,javafx.graphics -jar SortingVisualizer.jar
-    ```
-
-#### macOS/Linux
-1. Open Terminal and navigate to the directory containing the `SortingVisualizer.jar` file.
-2. Run the application using the following command, ensuring to replace `<path-to-javafx-sdk-lib>` with the correct path to the JavaFX SDK `lib` directory:
-    ```sh
-    java --module-path "<path-to-javafx-sdk-lib>" --add-modules javafx.controls,javafx.fxml,javafx.graphics -jar SortingVisualizer.jar
-    ```
 
 ### Usage
 After launching the Sorting Visualizer, you can:
@@ -151,26 +116,19 @@ After launching the Sorting Visualizer, you can:
 - Quick Sort
 - More in progress...
 
-## Quick Start With IntelliJ IDE
-1. Ensure Java JDK 11+ and JavaFX SDK 11+ are installed.
-2. Download or clone the Sorting Visualizer repository.
-3. Configure JavaFX in your IDE or set up environment variables as described in the Setup section.
-4. Run the application using your IDE or the command line instructions provided below.
 
-## Prerequisites
-To run Sorting Visualizer, ensure you have the following installed:
-- Java Development Kit (JDK) 11 or newer.
-- JavaFX SDK 11 or newer, available for download from [OpenJFX](https://openjfx.io/).
 
-## Dependencies
+## For Developers
 
+
+### Dependencies
 This project relies on the following dependencies:
 
 - **[JavaFX SDK 11](https://openjfx.io/) or newer**: Utilized for UI components and animations. Ensure you have the JavaFX SDK properly set up and configured with your IDE or build tool.
 - **[JUnit 5](https://junit.org/junit5/)**: Employed for unit testing. Ensure JUnit 5 is included in your project's build path if you're implementing unit tests.
 
-## Testing Dependencies
 
+### Testing Dependencies
 For unit testing and mocking within the Sorting Visualizer project, the following specific libraries and their versions are employed:
 
 - **[Mockito-Core 5.10.0](https://search.maven.org/artifact/org.mockito/mockito-core/5.10.0/jar)**: Used for mocking objects in tests, enabling isolated testing of components. Mockito simplifies the creation of mock objects and verification of interactions.
@@ -180,6 +138,20 @@ For unit testing and mocking within the Sorting Visualizer project, the followin
 - **[Objenesis 3.3](https://search.maven.org/artifact/org.objenesis/objenesis/3.3/jar)**: A library for instantiating Java objects without invoking their constructors, used by Mockito to create instances of mock objects.
 
 Ensure these libraries are correctly configured in your project's build path or dependency management system to facilitate effective testing.
+
+
+
+### Quick Start With IntelliJ IDE
+1. Ensure Java JDK 11+ and JavaFX SDK 11+ are installed.
+2. Download or clone the Sorting Visualizer repository.
+3. Configure JavaFX in your IDE.
+4. Run the application using your IDE.
+
+## Prerequisites
+To run Sorting Visualizer, ensure you have the following installed:
+- Java Development Kit (JDK) 11 or newer.
+- JavaFX SDK 11 or newer, available for download from [OpenJFX](https://openjfx.io/).
+
 
 ## Setup
 ### Download JavaFX SDK
