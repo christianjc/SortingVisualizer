@@ -66,7 +66,6 @@ Ensure these libraries are correctly configured in your project's build path or 
 
 ### Configure Environment Variables
 - Set the `JAVA_HOME` environment variable to the path of your JDK installation.
-- (Optional for convenience) Add the `bin` directory of your JDK to your system's `PATH` variable.
 
 ## Running the Application
 ### Windows
