@@ -6,14 +6,16 @@ Sorting Visualizer is a JavaFX application meticulously crafted to visually demo
 ## Table of Contents
 
 - [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
 - [For Users](#for-users)
   - [Quick Start](#quick-start)
   - [Usage](#usage)
   - [Supported Sorting Algorithms](#supported-sorting-algorithms)
 - [For Developers](#for-developers)
+  - [Quick Start](#setup)
   - [Dependencies](#dependencies)
   - [Testing Dependencies](#testing-dependencies)
-  - [Setup](#setup)
 - [Learning Opportunities](#learning-opportunities)
 - [Contributing](#contributing)
 - [Roadmap](#roadmap)
@@ -104,6 +106,13 @@ After launching the Sorting Visualizer, you can:
 
 ## For Developers
 
+### Quick Start
+1. Ensure Java JDK 11+ and JavaFX SDK 11+ are installed.
+2. Download or clone the Sorting Visualizer repository.
+3. Set the `JAVA_HOME` environment variable to the path of your JDK installation.
+4. Configure JavaFX in your IDE.
+5. Run the application using your IDE.
+
 ### Dependencies
 This project relies on the following dependencies:
 
@@ -121,16 +130,6 @@ For unit testing and mocking within the Sorting Visualizer project, the followin
 - **[Objenesis 3.3](https://search.maven.org/artifact/org.objenesis/objenesis/3.3/jar)**: A library for instantiating Java objects without invoking their constructors, used by Mockito to create instances of mock objects.
 
 Ensure these libraries are correctly configured in your project's build path or dependency management system to facilitate effective testing.
-
-
-### Quick Start With IntelliJ IDE
-1. Ensure Java JDK 11+ and JavaFX SDK 11+ are installed.
-2. Download or clone the Sorting Visualizer repository.
-3. Set the `JAVA_HOME` environment variable to the path of your JDK installation.
-4. Configure JavaFX in your IDE.
-5. Run the application using your IDE.
-
-
 
 
 ## Learning Opportunities
