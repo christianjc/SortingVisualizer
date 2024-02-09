@@ -13,7 +13,7 @@ Sorting Visualizer is a JavaFX application meticulously crafted to visually demo
   - [Usage](#usage)
   - [Supported Sorting Algorithms](#supported-sorting-algorithms)
 - [For Developers](#for-developers)
-  - [Quick Start](#setup)
+  - [Dev Quick Start](#dev-quick-start)
   - [Dependencies](#dependencies)
   - [Testing Dependencies](#testing-dependencies)
 - [Learning Opportunities](#learning-opportunities)
@@ -91,12 +91,20 @@ These instructions will guide you through getting the souce code, compiling and 
 
 
 ### Usage
-After launching the Sorting Visualizer, you can:
-1. Select a sorting algorithm from the dropdown menu.
-2. Use the slider to adjust the visualization speed.
-3. Click "Start Sort" to begin the visualization.
-4. Use "Reset" to shuffle the array and prepare for another sorting visualization.
-5. "Stop" can be used to halt the visualization at any time. Note: if you click "Start Sort" once again the will restart but with the data set it stopt at. this is intended so that the user can see how some algorithms are afected with the set is not properly sorted.
+Once the Sorting Visualizer is up and running, you have several interactive options at your disposal:
+
+1. **Select an Algorithm**: Choose your desired sorting algorithm from the dropdown menu to understand its sorting mechanism visually.
+   
+2. **Adjust Speed**: Use the slider control to fine-tune the speed of the sorting visualization, allowing for a more detailed observation or a quicker overview, as per your preference.
+
+3. **Initiate Sorting**: Press the "Start Sort" button to kick off the visualization of the chosen sorting algorithm. Watch as the algorithm methodically sorts the data, providing a clear illustration of its process.
+
+4. **Shuffle and Restart**: Click the "Reset" button to shuffle the dataset, setting the stage for a new round of visualization. This is particularly useful for comparing the efficiency of different algorithms on various data arrangements.
+
+5. **Pause the Visualization**: Use the "Stop" button to pause the ongoing visualization. This can be helpful if you wish to take a closer look at a specific moment in the sorting process.
+
+   **Note**: If you press "Start Sort" after stopping the visualization, the sorting will resume using the current dataset state. This feature is designed to highlight how certain algorithms might behave differently depending on the degree of sorting already present in the dataset. It offers a unique insight into the adaptive nature of some sorting algorithms when faced with partially sorted data.
+
 
 ### Supported Sorting Algorithms
 - Bubble Sort
@@ -106,12 +114,36 @@ After launching the Sorting Visualizer, you can:
 
 ## For Developers
 
-### Quick Start
-1. Ensure Java JDK 11+ and JavaFX SDK 11+ are installed.
-2. Download or clone the Sorting Visualizer repository.
-3. Set the `JAVA_HOME` environment variable to the path of your JDK installation.
-4. Configure JavaFX in your IDE.
-5. Run the application using your IDE.
+### Developer Quick Start Guide
+
+Jumpstart your development with the Sorting Visualizer by following these simple steps:
+
+1. **Install JDK and JavaFX**: Verify that Java Development Kit (JDK) version 11 or newer is installed on your system. Additionally, download and install JavaFX SDK version 11 or higher. These are crucial for compiling and running JavaFX applications.
+
+    - [Download JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+    - [Download JavaFX SDK](https://gluonhq.com/products/javafx/)
+
+2. **Obtain the Source Code**: Clone the Sorting Visualizer repository to your local machine or download it as a ZIP archive and extract it to your preferred directory.
+
+    ```sh
+    git clone https://github.com/yourusername/SortingVisualizer.git
+    ```
+
+    Replace `https://github.com/yourusername/SortingVisualizer.git` with the actual repository URL.
+
+3. **Configure the JDK Environment**: Set the `JAVA_HOME` environment variable to point to your JDK installation directory. This step ensures that your development tools can locate the JDK binaries.
+
+    - **Windows**: [Setting JAVA_HOME on Windows](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html)
+    - **macOS/Linux**: Add `export JAVA_HOME=/path/to/jdk` to your shell profile (`~/.bash_profile`, `~/.zshrc`, etc.)
+
+4. **Set Up JavaFX in Your IDE**: Integrate JavaFX into your Integrated Development Environment (IDE) to leverage its powerful features for UI development. This typically involves adding the JavaFX SDK as a library in your project settings and configuring the module-path to include JavaFX modules.
+
+    - For detailed instructions, refer to your IDE's documentation or the [JavaFX and IDEs](https://openjfx.io/openjfx-docs/#IDE) section of the OpenJFX documentation.
+
+5. **Launch the Application**: Use your IDE's run functionality to start the Sorting Visualizer application. Ensure that the IDE is configured to use the JDK installation specified in your `JAVA_HOME` and that JavaFX libraries are correctly referenced.
+
+By following these steps, you'll have a local development environment set up for the Sorting Visualizer, allowing you to explore, modify, and enhance the application.
+
 
 ### Dependencies
 This project relies on the following dependencies:
