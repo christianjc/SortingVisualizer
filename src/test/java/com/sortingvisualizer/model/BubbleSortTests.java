@@ -53,7 +53,7 @@ class BubbleSortTests {
         bubbleSort.sort();
 
         // Verifying swap operations are performed, indicating sorting process.
-        verify(mockCanvas, atLeastOnce()).swap(anyInt(), anyInt(), eq(Color.RED));
+        verify(mockCanvas, atLeastOnce()).swap(anyInt(), anyInt(), eq(Color.web("#FFC107")));
     }
 
     /**
@@ -90,7 +90,7 @@ class BubbleSortTests {
         bubbleSort.sort();
 
         // Verifying swap operations are correctly performed even with duplicate values in the array.
-        verify(mockCanvas, atLeastOnce()).swap(anyInt(), anyInt(), eq(Color.RED));
+        verify(mockCanvas, atLeastOnce()).swap(anyInt(), anyInt(), eq(Color.web("#FFC107")));
     }
 
     /**
